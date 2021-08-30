@@ -1,0 +1,54 @@
+.logo-container {
+  text-align: center;
+
+  a {
+    color: $white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $primary-color;
+    }
+  }
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.home-banner {
+  background: url('../assets/img/background.png') #000 no-repeat center center;
+  background-size: cover;
+  height: 570px;
+  position: relative;
+
+  .banner-content {
+    position: absolute;
+    top: auto;
+    bottom: 100px;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
+    padding: 0px 10px;
+
+    h1 {
+      font-size: 30px;
+      line-height: 1.2;
+      color: $white;
+      text-align: center;
+
+      span {
+        display: block;
+      }
+    }
+
+    p {
+      color: $white;
+      text-align: center;
+    }
+  }
+}
