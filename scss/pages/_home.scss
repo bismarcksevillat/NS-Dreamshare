@@ -8,9 +8,7 @@
     text-decoration: none;
     text-transform: uppercase;
 
-    &:hover,
-    &:active,
-    &:focus {
+    @include on-event {
       color: $primary-color;
     }
   }
@@ -29,17 +27,17 @@
   .banner-content {
     position: absolute;
     top: auto;
-    bottom: 100px;
+    bottom: 150px;
     left: 0px;
     right: 0px;
     z-index: 10;
     padding: 0px 10px;
+    text-align: center;
 
     h1 {
       font-size: 30px;
       line-height: 1.2;
       color: $white;
-      text-align: center;
 
       span {
         display: block;
@@ -48,7 +46,29 @@
 
     p {
       color: $white;
-      text-align: center;
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
+
+  @media (min-width: 768px) {
+    height: 700px;
+
+    .banner-content {
+      bottom: calc(50% - 128px);
+
+      .logo-container {
+        display: none;
+      }
+
+      h1 {
+        font-size: 52px;
+        margin: 0px 0px 20px;
+      }
+
+      p {
+        margin: 0px 0px 35px;
+      }
     }
   }
 }

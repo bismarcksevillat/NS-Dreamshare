@@ -1,19 +1,41 @@
-
 header {
   position: absolute;
-  top: 10px;
+  top: 20px;
   bottom: auto;
   left: 10px;
   right: 10px;
   z-index: 100;
 
-  .logo-container {
-    display: none;
+  .info-container {
+    .logo-container {
+      display: none;
+    }
+
+    nav {
+      text-align: center;
+
+      a {
+        color: $white;
+
+        + a {
+          margin-left: 20px;
+        }
+      }
+    }
   }
 
   @media (min-width: 768px) {
-    .logo-container {
-      display: block;
+    top: 40px;
+
+    .info-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo-container {
+        display: block;
+      }
     }
   }
 }
