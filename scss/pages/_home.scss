@@ -24,6 +24,16 @@
   height: 570px;
   position: relative;
 
+  .overlay {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: rgba($black, 0.4);
+    z-index: 0;
+  }
+
   .banner-content {
     position: absolute;
     top: auto;
