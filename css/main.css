@@ -357,27 +357,39 @@ a {
 
 @-webkit-keyframes glow {
   0% {
-    border-color: #667df3;
-    -webkit-box-shadow: 0 0 5px rgba(102, 125, 243, 0.2), inset 0 0 10px rgba(102, 125, 243, 0.1);
-            box-shadow: 0 0 5px rgba(102, 125, 243, 0.2), inset 0 0 10px rgba(102, 125, 243, 0.1);
+    -webkit-box-shadow: 0 0 -10px #667df3;
+            box-shadow: 0 0 -10px #667df3;
+  }
+  40% {
+    -webkit-box-shadow: 0 0 20px #667df3;
+            box-shadow: 0 0 20px #667df3;
+  }
+  60% {
+    -webkit-box-shadow: 0 0 20px #667df3;
+            box-shadow: 0 0 20px #667df3;
   }
   100% {
-    border-color: #19d4ca;
-    -webkit-box-shadow: 0 0 20px rgba(102, 125, 243, 0.6), inset 0 0 10px rgba(102, 125, 243, 0.4);
-            box-shadow: 0 0 20px rgba(102, 125, 243, 0.6), inset 0 0 10px rgba(102, 125, 243, 0.4);
+    -webkit-box-shadow: 0 0 -10px #667df3;
+            box-shadow: 0 0 -10px #667df3;
   }
 }
 
 @keyframes glow {
   0% {
-    border-color: #667df3;
-    -webkit-box-shadow: 0 0 5px rgba(102, 125, 243, 0.2), inset 0 0 10px rgba(102, 125, 243, 0.1);
-            box-shadow: 0 0 5px rgba(102, 125, 243, 0.2), inset 0 0 10px rgba(102, 125, 243, 0.1);
+    -webkit-box-shadow: 0 0 -10px #667df3;
+            box-shadow: 0 0 -10px #667df3;
+  }
+  40% {
+    -webkit-box-shadow: 0 0 20px #667df3;
+            box-shadow: 0 0 20px #667df3;
+  }
+  60% {
+    -webkit-box-shadow: 0 0 20px #667df3;
+            box-shadow: 0 0 20px #667df3;
   }
   100% {
-    border-color: #19d4ca;
-    -webkit-box-shadow: 0 0 20px rgba(102, 125, 243, 0.6), inset 0 0 10px rgba(102, 125, 243, 0.4);
-            box-shadow: 0 0 20px rgba(102, 125, 243, 0.6), inset 0 0 10px rgba(102, 125, 243, 0.4);
+    -webkit-box-shadow: 0 0 -10px #667df3;
+            box-shadow: 0 0 -10px #667df3;
   }
 }
 
@@ -879,13 +891,8 @@ a {
   border: 1px solid #444444;
   -webkit-transition: 1s ease all;
   transition: 1s ease all;
-  -webkit-animation: glow 3s infinite;
-          animation: glow 3s infinite;
-}
-
-.create-holiday form input.text-input:hover, .create-holiday form input.text-input:active, .create-holiday form input.text-input:focus {
-  -webkit-animation: none;
-          animation: none;
+  -webkit-animation: glow 5000ms infinite;
+          animation: glow 5000ms infinite;
 }
 
 .create-holiday form input.btn {
