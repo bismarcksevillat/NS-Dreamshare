@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 header {
   position: absolute;
   top: 20px;
@@ -62,7 +63,7 @@ header .info-container nav a + a {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   background-color: #ff4e50;
-  padding: 8px 15px;
+  padding: 8px 20px;
   font-size: 14px;
   text-transform: none;
   border: 2px solid #ff4e50;
@@ -98,6 +99,18 @@ header .info-container nav a + a {
   border: 2px solid #ff4e50;
   background-color: #fff;
   color: #ff4e50;
+}
+
+.btn.red-border {
+  border: 2px solid #ff4e50;
+  background-color: transparent;
+  color: #ff4e50;
+}
+
+.btn.red-border:hover, .btn.red-border:active, .btn.red-border:focus {
+  border: 2px solid #ff4e50;
+  background-color: #ff4e50;
+  color: #fff;
 }
 
 * {
@@ -350,10 +363,141 @@ a {
   }
 }
 
-@media (min-width) {
+@media (min-width: 992px) {
   .steps-work .steps-container .step {
     -ms-flex-preferred-size: 300px;
         flex-basis: 300px;
+  }
+}
+
+.meet-partner h2 {
+  margin: 0px 0px 20px;
+  color: #444444;
+  font-size: 22px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.meet-partner .partners-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.meet-partner .partners-container .partner {
+  text-align: center;
+}
+
+.meet-partner .partners-container .partner + .partner {
+  margin-top: 20px;
+}
+
+.meet-partner .partners-container .partner .img-container {
+  position: relative;
+  display: inline-block;
+}
+
+.meet-partner .partners-container .partner .img-container:after {
+  content: '';
+  background: url("../assets/img/music-icon.png") no-repeat center center;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  background-color: #ff4e50;
+  position: absolute;
+  top: auto;
+  bottom: 5px;
+  right: 0px;
+  left: auto;
+}
+
+.meet-partner .partners-container .partner .img-container#marie:after {
+  background: url("../assets/img/brush-icon.png") no-repeat center center;
+  background-color: #19d4ca;
+}
+
+.meet-partner .partners-container .partner .img-container#diana:after {
+  background: url("../assets/img/camera-icon.png") no-repeat center center;
+  background-color: #ff773c;
+}
+
+.meet-partner .partners-container .partner .img-container#christopher:after {
+  background: url("../assets/img/airplane-icon.png") no-repeat center center;
+  background-color: #667df3;
+}
+
+.meet-partner .partners-container .partner p.description {
+  font-family: "Roboto", sans-serif;
+  color: #666666;
+}
+
+.meet-partner .btn-container {
+  text-align: center;
+  margin: 30px 0px;
+}
+
+@media (min-width: 768px) {
+  .meet-partner .partners-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .meet-partner .partners-container .partner {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    width: 50%;
+    margin-bottom: 40px;
+  }
+  .meet-partner .partners-container .partner + .partner {
+    margin-top: 0px;
+  }
+  .meet-partner .partners-container .partner p {
+    max-width: 236px;
+    margin: 10px auto;
+  }
+  .meet-partner .partners-container .partner p.description {
+    min-height: 50px;
+  }
+  .meet-partner .btn-container {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .meet-partner {
+    padding-top: 40px;
+  }
+  .meet-partner .partners-container {
+    max-width: none;
+  }
+  .meet-partner .partners-container .partner {
+    width: auto;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+  .meet-partner .partners-container .partner p {
+    max-width: 205px;
   }
 }
 /*# sourceMappingURL=main.css.map */

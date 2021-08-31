@@ -179,10 +179,138 @@
     }
   }
 
-  @media (min-width) {
+  @media (min-width: 992px) {
     .steps-container {
       .step {
         flex-basis: 300px;
+      }
+    }
+  }
+}
+
+.meet-partner {
+  h2 {
+    margin: 0px 0px 20px;
+    color: $text-color;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  .partners-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .partner {
+      text-align: center;
+
+      + .partner {
+        margin-top: 20px;
+      }
+
+      .img-container {
+        position: relative;
+        display: inline-block;
+
+        &:after {
+          content: '';
+          background: url('../assets/img/music-icon.png') no-repeat center center;
+          width: 32px;
+          height: 32px;
+          border-radius: 100%;
+          background-color: $primary-color;
+          position: absolute;
+          top: auto;
+          bottom: 5px;
+          right: 0px;
+          left: auto;
+        }
+
+        &#marie {
+          &:after {
+            background: url('../assets/img/brush-icon.png') no-repeat center center;
+            background-color: $light-green;
+          }
+        }
+
+        &#diana {
+          &:after {
+            background: url('../assets/img/camera-icon.png') no-repeat center center;
+            background-color: $secondary-color;
+          }
+        }
+
+        &#christopher {
+          &:after {
+            background: url('../assets/img/airplane-icon.png') no-repeat center center;
+            background-color: $blue;
+          }
+        }
+      }
+
+      p {
+        &.description {
+          font-family: $secondary-font;
+          color: #666666;
+        }
+      }
+    }
+  }
+
+  .btn-container {
+    text-align: center;
+    margin: 30px 0px;
+  }
+
+  @media (min-width: 768px) {
+    .partners-container {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 500px;
+      margin: 0 auto;
+
+      .partner {
+        flex-basis: 50%;
+        width: 50%;
+        margin-bottom: 40px;
+
+        + .partner {
+          margin-top: 0px;
+        }
+
+        p {
+          max-width: 236px;
+          margin: 10px auto;
+
+          &.description {
+            min-height: 50px;
+          }
+        }
+      }
+    }
+
+    .btn-container {
+      margin-top: 0px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 40px;
+
+    .partners-container {
+      max-width: none;
+
+      .partner {
+        width: auto;
+        flex-basis: 25%;
+
+        p{
+          max-width: 205px;
+        }
       }
     }
   }

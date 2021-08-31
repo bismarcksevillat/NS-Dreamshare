@@ -2,7 +2,7 @@
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   background-color: $primary-color;
-  padding: 8px 15px;
+  padding: 8px 20px;
   font-size: 14px;
   text-transform: none;
   border: 2px solid $primary-color;
@@ -37,6 +37,18 @@
       border: 2px solid $primary-color;
       background-color: $white;
       color: $primary-color;
+    }
+  }
+
+  &.red-border {
+    border: 2px solid $primary-color;
+    background-color: transparent;
+    color: $primary-color;
+
+    @include on-event {
+      border: 2px solid $primary-color;
+      background-color: $primary-color;
+      color: $white;
     }
   }
 }
