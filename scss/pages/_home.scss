@@ -476,7 +476,8 @@ padding: 50px 0px;
         padding: 5px 30px 5px 15px;
         border: 1px solid $text-color;
         transition: 1s ease all;
-        animation: glow 5000ms infinite;
+        -webkit-animation: glow 5000ms infinite;
+                animation: glow 5000ms infinite;
 
         // @include on-event{
         //   animation: none;
