@@ -18,6 +18,17 @@
   }
 }
 
+@keyframes glow {
+  0%{
+    border-color: $blue;
+    box-shadow: 0 0 5px rgba($blue, 0.2), inset 0 0 10px rgba($blue, 0.1);
+  }
+100%{
+  border-color: $light-green;
+  box-shadow: 0 0 20px rgba($blue, 0.6), inset 0 0 10px rgba($blue, 0.4);
+}
+}
+
 .home-banner {
   background: url('../assets/img/background.png') #000 no-repeat center center;
   background-size: cover;
@@ -379,6 +390,7 @@ padding: 50px 0px;
         left: 0px;
         right: 0px;
         z-index: 0;
+        transition: 0.3s ease all;
       }
 
       h3 {
@@ -389,6 +401,12 @@ padding: 50px 0px;
         font-weight: bold;
         z-index: 5;
         text-align: center;
+      }
+
+      @include on-event{
+        .overlay{
+          background-color: rgba($primary-color, 0.5);
+        }
       }
     }
   }
@@ -468,6 +486,12 @@ padding: 50px 0px;
         box-sizing: border-box;
         padding: 5px 30px 5px 15px;
         border: 1px solid $text-color;
+        transition: 1s ease all;
+        animation: glow 3s infinite;
+
+        @include on-event{
+          animation: none;
+        }
       }
 
       &.btn {

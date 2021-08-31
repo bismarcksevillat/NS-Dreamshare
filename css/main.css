@@ -1,5 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+.show-down {
+  -webkit-transform: translateY(-60px);
+          transform: translateY(-60px);
+  opacity: 0;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+.show-down.in {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.show-up {
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+  opacity: 0;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+.show-up.in {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.show-right {
+  -webkit-transform: translateX(60px);
+          transform: translateX(60px);
+  opacity: 0;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+.show-right.in {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.show-left {
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+  opacity: 0;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+.show-left.in {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
 header {
   position: absolute;
   top: 20px;
@@ -296,6 +352,32 @@ a {
 @media (min-width: 768px) {
   .logo-container {
     text-align: left;
+  }
+}
+
+@-webkit-keyframes glow {
+  0% {
+    border-color: #667df3;
+    -webkit-box-shadow: 0 0 5px rgba(102, 125, 243, 0.2), inset 0 0 10px rgba(102, 125, 243, 0.1);
+            box-shadow: 0 0 5px rgba(102, 125, 243, 0.2), inset 0 0 10px rgba(102, 125, 243, 0.1);
+  }
+  100% {
+    border-color: #19d4ca;
+    -webkit-box-shadow: 0 0 20px rgba(102, 125, 243, 0.6), inset 0 0 10px rgba(102, 125, 243, 0.4);
+            box-shadow: 0 0 20px rgba(102, 125, 243, 0.6), inset 0 0 10px rgba(102, 125, 243, 0.4);
+  }
+}
+
+@keyframes glow {
+  0% {
+    border-color: #667df3;
+    -webkit-box-shadow: 0 0 5px rgba(102, 125, 243, 0.2), inset 0 0 10px rgba(102, 125, 243, 0.1);
+            box-shadow: 0 0 5px rgba(102, 125, 243, 0.2), inset 0 0 10px rgba(102, 125, 243, 0.1);
+  }
+  100% {
+    border-color: #19d4ca;
+    -webkit-box-shadow: 0 0 20px rgba(102, 125, 243, 0.6), inset 0 0 10px rgba(102, 125, 243, 0.4);
+            box-shadow: 0 0 20px rgba(102, 125, 243, 0.6), inset 0 0 10px rgba(102, 125, 243, 0.4);
   }
 }
 
@@ -697,6 +779,8 @@ a {
   left: 0px;
   right: 0px;
   z-index: 0;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
 }
 
 .discover-holiday .activities-container .activity h3 {
@@ -707,6 +791,10 @@ a {
   font-weight: bold;
   z-index: 5;
   text-align: center;
+}
+
+.discover-holiday .activities-container .activity:hover .overlay, .discover-holiday .activities-container .activity:active .overlay, .discover-holiday .activities-container .activity:focus .overlay {
+  background-color: rgba(255, 78, 80, 0.5);
 }
 
 @media (min-width: 768px) {
@@ -789,6 +877,15 @@ a {
           box-sizing: border-box;
   padding: 5px 30px 5px 15px;
   border: 1px solid #444444;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  -webkit-animation: glow 3s infinite;
+          animation: glow 3s infinite;
+}
+
+.create-holiday form input.text-input:hover, .create-holiday form input.text-input:active, .create-holiday form input.text-input:focus {
+  -webkit-animation: none;
+          animation: none;
 }
 
 .create-holiday form input.btn {
