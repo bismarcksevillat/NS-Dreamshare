@@ -500,4 +500,130 @@ a {
     max-width: 205px;
   }
 }
+
+.discover-holiday h2 {
+  margin: 0px 0px 30px;
+  color: #444444;
+  font-size: 22px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.discover-holiday .activities-container .activity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 120px;
+  max-width: 300px;
+  border-radius: 10px;
+  margin: 0 auto;
+  background: url("../assets/img/activity-sports.png") #fff no-repeat center center;
+  background-size: cover;
+}
+
+.discover-holiday .activities-container .activity#wellness {
+  background-image: url("../assets/img/activity-wellness.png");
+}
+
+.discover-holiday .activities-container .activity#extreme {
+  background-image: url("../assets/img/activity-extreme.png");
+}
+
+.discover-holiday .activities-container .activity#games {
+  background-image: url("../assets/img/activity-games.png");
+}
+
+.discover-holiday .activities-container .activity#culture {
+  background-image: url("../assets/img/activity-culture.png");
+}
+
+.discover-holiday .activities-container .activity#enjoyment {
+  background-image: url("../assets/img/activity-enjoyment.png");
+}
+
+.discover-holiday .activities-container .activity#traveling {
+  background-image: url("../assets/img/activity-traveling.png");
+}
+
+.discover-holiday .activities-container .activity + .activity {
+  margin-top: 10px;
+}
+
+.discover-holiday .activities-container .activity .overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 0;
+}
+
+.discover-holiday .activities-container .activity h3 {
+  color: #fff;
+  font-size: 22px;
+  max-width: 190px;
+  margin: 0 auto;
+  font-weight: bold;
+  z-index: 5;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .discover-holiday {
+    padding-top: 50px;
+  }
+  .discover-holiday .activities-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .discover-holiday .activities-container .activity {
+    width: calc(33% - 10px);
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    max-width: none;
+    min-height: 310px;
+    margin: 0px 0px 20px;
+  }
+  .discover-holiday .activities-container .activity#culture {
+    width: calc(66% - 2px);
+  }
+  .discover-holiday .activities-container .activity#enjoyment {
+    width: calc(66% - 2px);
+  }
+  .discover-holiday .activities-container .activity + .activity {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 992px) {
+  .discover-holiday .activities-container .activity {
+    min-height: 310px;
+  }
+}
 /*# sourceMappingURL=main.css.map */

@@ -308,9 +308,124 @@
         width: auto;
         flex-basis: 25%;
 
-        p{
+        p {
           max-width: 205px;
         }
+      }
+    }
+  }
+}
+
+.discover-holiday {
+  h2 {
+    margin: 0px 0px 30px;
+    color: $text-color;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  .activities-container {
+    .activity {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 120px;
+      max-width: 300px;
+      border-radius: 10px;
+      margin: 0 auto;
+      background: url('../assets/img/activity-sports.png') $white no-repeat center center;
+      background-size: cover;
+
+      &#wellness {
+        background-image: url('../assets/img/activity-wellness.png');
+      }
+
+      &#extreme {
+        background-image: url('../assets/img/activity-extreme.png');
+      }
+
+      &#games {
+        background-image: url('../assets/img/activity-games.png');
+      }
+
+      &#culture {
+        background-image: url('../assets/img/activity-culture.png');
+      }
+
+      &#enjoyment {
+        background-image: url('../assets/img/activity-enjoyment.png');
+      }
+
+      &#traveling {
+        background-image: url('../assets/img/activity-traveling.png');
+      }
+
+      + .activity {
+        margin-top: 10px;
+      }
+
+      .overlay {
+        background-color: rgba($black, 0.3);
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 0;
+      }
+
+      h3 {
+        color: $white;
+        font-size: 22px;
+        max-width: 190px;
+        margin: 0 auto;
+        font-weight: bold;
+        z-index: 5;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 50px;
+
+    .activities-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+
+      .activity {
+        width: calc(33% - 10px);
+        flex-basis: auto;
+        max-width: none;
+        min-height: 310px;
+        margin: 0px 0px 20px;
+
+        &#culture {
+          width: calc(66% - 2px);
+        }
+
+        &#enjoyment{
+          width: calc(66% - 2px);
+        }
+
+        + .activity {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+
+  @media(min-width: 992px){
+    .activities-container{
+      .activity{
+        min-height: 310px;
       }
     }
   }
