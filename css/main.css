@@ -336,7 +336,6 @@ footer .columns-container .designed p {
 
 body {
   margin: 0px;
-  overflow: hidden;
 }
 
 h1,
@@ -721,6 +720,10 @@ a {
   .meet-partner .partners-container .partner p {
     max-width: 205px;
   }
+}
+
+.discover-holiday {
+  overflow: hidden;
 }
 
 .discover-holiday h2 {
