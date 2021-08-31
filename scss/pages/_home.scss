@@ -35,7 +35,7 @@
     bottom: 0px;
     left: 0px;
     right: 0px;
-    background: rgba($black, 0.4);
+    background: rgba($black, 0.1);
     z-index: 0;
   }
 
@@ -47,6 +47,7 @@
       font-size: 30px;
       line-height: 1.2;
       color: $white;
+      font-weight: 600;
 
       span {
         display: block;
@@ -81,7 +82,7 @@
 }
 
 .steps-work {
-  padding: 90px 0px 50px;
+padding: 50px 0px;
 
   h2 {
     margin: 0px 0px 20px;
@@ -159,6 +160,8 @@
   }
 
   @media (min-width: 768px) {
+    padding: 90px 0px 50px;
+
     h2 {
       margin-bottom: 30px;
     }
@@ -298,7 +301,7 @@
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     padding-top: 40px;
 
     .partners-container {
@@ -448,7 +451,7 @@
     font-family: $secondary-font;
     color: $text-color-secondary;
     font-size: 18px;
-    margin: 0px;
+    margin: 10px 0px;
   }
 
   form {
