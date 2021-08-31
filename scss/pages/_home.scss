@@ -18,13 +18,6 @@
   }
 }
 
-@keyframes glow {
-  0% { box-shadow: 0 0 -10px $blue; }
-  40% { box-shadow: 0 0 20px $blue; }
-  60% { box-shadow: 0 0 20px $blue; }
-  100% { box-shadow: 0 0 -10px $blue; }
-}
-
 .home-banner {
   background: url('../assets/img/background.png') #000 no-repeat center center;
   background-size: cover;
